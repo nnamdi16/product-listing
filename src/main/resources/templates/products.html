@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head lang="en">
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Spring Core online Tutorial - List all Products </title>
+    <link rel="stylesheet"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script
+            src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--    <link href="https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--          th:href="@{/webjars/org.webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>-->
+    <!--    <script src="https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.4.1/jquery.min.js" th:src="@{/webjars/org.webjars/jquery/3.4.1/jquery.min.js}"> </script>-->
+    <!--    <link href="../static/css/spring-core.css" th:src="@{css/spring-core.css}" rel="stylesheet" media="screen"/>-->
 </head>
 <body>
-$END$
+<div class="container">
+    <div th:if="${not #lists.isEmpty(products)}">
+        <h2>Product List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.imageUrl}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>
+

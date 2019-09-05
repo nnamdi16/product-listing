@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Spring Core online Tutorial</title>
+    <link rel="stylesheet"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script
+            src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--    <link href="https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--          th:href="@{/webjars/org.webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>-->
+    <!--    <script src="https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.4.1/jquery.min.js" th:src="@{/webjars/org.webjars/jquery/3.4.1/jquery.min.js}"> </script>-->
+    <!--    <link href="../static/css/spring-core.css" th:src="@{css/spring-core.css}" rel="stylesheet" media="screen"/>-->
+</head>
+<body>
+<div class="container">
+   <div class="row">
+       <div class="col-sm-6">
+           <h2>Show Product</h2>
+       </div>
+   </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Product Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text = ${product.id}>Product Id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Description:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text = ${product.description}>Product Id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Price:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text = ${product.price}>Product Id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Image Url:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text = ${product.imageUrl}>Product Id</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,4 +1,9 @@
-package nnamdi.springframework.springmvc;
+package nnamdi.springframework.springmvc.services;
 
-public class services {
+import nnamdi.springframework.springmvc.domain.Product;
+
+import java.util.List;
+
+public interface ProductServices {
+    List<Product> listAllProducts();
 }
